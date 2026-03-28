@@ -7,7 +7,7 @@
   /* ABOUT SECTION */
   
   .about {
-    background: linear-gradient(to bottom, #f9fafc, #ffffff);
+    background: rgba(245, 242, 234, 1);
     padding: 180px 5%  60px;
     font-family: "Poppins", sans-serif;
   }

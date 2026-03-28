@@ -94,11 +94,8 @@ const About = () => {
             </h2>
 
             <p className="founder__quote">
-              “Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500, Lorem Ipsum is simply dummy text of the printing
-              and typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500.”
+              “Hello people, this is the founder and I'd love to share my perspective.
+              For me TAKA is not just a service or a platform it's a solution, a stitch to the existing gap in the existing marketing campaigns at your comfort”
             </p>
 
             <h3 className="founder__name">
@@ -134,9 +131,7 @@ const About = () => {
               <img src={diamond1} className="team__diamond" alt="diamond" />
 
               <p className="team__desc">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s,
+                It's not just one person but a combined team effort that has moulded the raw idea into a workable perfect solution let's have a look.
               </p>
 
             </div>

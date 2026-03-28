@@ -7,8 +7,8 @@ import s1 from "../assets/service1.png";
 import s2 from "../assets/service2.png";
 import s3 from "../assets/service3.jpg";
 import s4 from "../assets/service4.jpg";
-import stepIcon from "../assets/stepIcon.png";
-import diamond from "../assets/dimond.png";
+// import stepIcon from "../assets/stepIcon.png";
+// import diamond from "../assets/dimond.png";
 // import infinity from "../assets/infinity.png";
 import client1 from "../assets/client1.png";
 import client2 from "../assets/client2.png";
@@ -17,7 +17,7 @@ import client2 from "../assets/client2.png";
 // import paperIcon from "../assets/boat.png";
 import center from "../assets/center.png";
 import frame from "../assets/Influencer_Card.png";
-// import mobileCenter from "../assets/mobileCenter.png";
+import mobileCenter from "../assets/mobileCenter.png";
 
 const offersData = [
     { title: "Lorem Ipsum" },
@@ -54,12 +54,12 @@ const servicesData = [
     },
 ];
 
-const steps = [
-    { number: "01", title: "Lorem Ipsum" },
-    { number: "02", title: "Lorem Ipsum" },
-    { number: "03", title: "Lorem Ipsum" },
-    { number: "04", title: "Lorem Ipsum" },
-];
+// const steps = [
+//     { number: "01", title: "Lorem Ipsum" },
+//     { number: "02", title: "Lorem Ipsum" },
+//     { number: "03", title: "Lorem Ipsum" },
+//     { number: "04", title: "Lorem Ipsum" },
+// ];
 
 const testimonials = [
     {
@@ -164,18 +164,18 @@ const Home = () => {
                 {/* Upper Text */}
                 <div className="trusted-header">
                     <h1>
-                        Indore’s First Verified Creator Network. <br />
+                        Indore’s First Verified Creator <br />
                         Influence. Commerce. Connected.
                     </h1>
                     <p>
                         Bridging the gap between top-tier local creators and premium brands. No more cold DMs. No more fake engagement. Just seamless collaborations and measurable foot traffic.
                     </p>
-                </div>
+                </div>x
 
                 {/* Image Container */}
                 <div className="trusted-image-wrapper">
                     <img src={center} alt="Showcase" className="desktop-img" />
-                    {/* <img src={mobileCenter} alt="Showcase Mobile" className="mobile-img" /> */}
+                    <img src={mobileCenter} alt="Showcase Mobile" className="mobile-img" />
                 </div>
 
             </section>
@@ -204,7 +204,7 @@ const Home = () => {
 
                         <button className="tools__btn">
                             <span>Find Out More ➔</span>
-                            <i>↗</i>
+                            <i></i>
                         </button>
 
                     </div>
@@ -248,7 +248,7 @@ const Home = () => {
                                 onClick={() => setActive(i)}
                             >
                                 <span>FIND OUT MORE  ➔</span>
-                                
+
                             </button>
 
                         </div>
@@ -306,9 +306,9 @@ const Home = () => {
 
             {/* -------------------------------process-------------------------- */}
 
-            <section className="process">
+            {/* <section className="process">
 
-                {/* heading */}
+                
                 <div className="process__header">
                     <div className="process__title">
                         <h2>
@@ -322,12 +322,12 @@ const Home = () => {
                         </div>
                     </div>
 
-                    {/* top right decorative image */}
+                    
                     <img src={diamond} alt="" className="diamondShape" />
                 </div>
 
 
-                {/* cards */}
+                
                 <div className="process__grid">
 
                     {steps.map((step, i) => (
@@ -344,13 +344,13 @@ const Home = () => {
                         </div>
                     ))}
 
-                    {/* center circle CTA */}
+                    
                     <div className="startCircle">
                         LET’S<br />START
                     </div>
 
                 </div>
-            </section>
+            </section> */}
 
             {/*--------------------------------CLIENTS ---------------------------*/}
 
@@ -413,7 +413,7 @@ const Home = () => {
                         <h3 className="statCard__number">20+</h3>
                         <p className="statCard__label"> PREMIUM<br /> BRANDS</p>
                         <span className="statCard__small">
-                             Partnering with the city's top cafes, event organizers, and lifestyle brands.
+                            Partnering with the city's top cafes, event organizers, and lifestyle brands.
                         </span>
                     </div>
 

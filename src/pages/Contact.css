@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.contactSection {
+  background: #f3efe9;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* OUTLINE TEXT */
+.outlineText {
+  font-size: 80px;
+  font-weight: 800;
+
+  /* TEXT OUTLINE */
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+
+  /* OPTIONAL GRADIENT (agar use karna ho) */
+  /* background: linear-gradient(179.69deg, #C5C9E6 0.27%, #FFFFFF 72.39%); */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  z-index: 0;
+  pointer-events: none;
+  font-family: "Unbounded", sans-serif;
+}
+
+/* MAIN TEXT */
+.mainText {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1c1c1c;
+   font-family: unbounded,sans-serif;
+  margin-top: 10px;
+}
+
+/* INFO ROW */
+.infoRow {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 60px auto 0px;
+  margin-bottom: -80px;
+  font-weight: 600;
+  color: #1c1c1c;
+  font-family: unbounded,sans-serif;
+}
+
+/* VIDEO BOX */
+.videoBox {
+  position: relative;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.videoBox img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+/* PLAY BUTTON */
+.playBtn {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  background: #1c2233;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
