@@ -1,72 +1,44 @@
 import React from "react";
 import "./About.css";
 import about_hero1 from "../assets/about_hero1.png";
-import about_hero2 from "../assets/about_hero2.png";
+// import about_hero2 from "../assets/about_hero2.png";
 import diamond1 from "../assets/diamond1.png";
 import about3 from "../assets/about3.png";
-import about_cta from "../assets/about_cta.png";
+import about_cta from "../assets/hero-pattern.png";
+import textBg from "../assets/service-bg.png";   // 👈 text ke liye image
+import desktopImg from "../assets/desktopImg.png";
+import mobileImg from "../assets/service-phone.png";
+import abhishek from "../assets/abhishek.jpeg";
+ 
 
 const About = () => {
   return (
     <>
-      <section className="about">
-        <div className="about__container">
+      <section className="identitySection">
 
-          {/* LEFT CONTENT */}
-          <div className="about__content">
+        {/* Heading */}
+        <h1
+          className="identityTitle"
+          style={{ backgroundImage: `url(${textBg})` }}
+        >
+          OUR IDENTITY
+        </h1>
 
-            <h1 className="about__title">
-              Lorem Ipsum Is <br /> Simply Dummy
-            </h1>
-
-            <p className="about__description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
-            </p>
-
-            <button className="about__cta">
-              LET’S <br /> START
-            </button>
-
-          </div>
-
-
-          {/* RIGHT IMAGES */}
-          <div className="about__gallery">
-
-            <div className="about__card about__card--left">
-              <img
-                src={about_hero1}
-                alt="Creative team"
-                className="about__image"
-              />
-
-              <span className="about__stat">85%</span>
-
-              <p className="about__stat-text">
-                Lorem Ipsum is simply dummy text of the printing
-              </p>
-            </div>
-
-
-            <div className="about__card about__card--right">
-              <img
-                src={about_hero2}
-                alt="Creative workspace"
-                className="about__image"
-              />
-
-              <span className="about__stat">85%</span>
-
-              <p className="about__stat-text">
-                Lorem Ipsum is simply dummy text of the printing
-              </p>
-            </div>
-
-          </div>
-
+        {/* Tabs */}
+        <div className="identityTabs">
+          <span>About Us</span>
+          <span className="active">Who We Are</span>
+          <span>Our Story</span>
         </div>
+
+        {/* Image Card (Responsive) */}
+        <div className="identityImageBox">
+          <picture>
+            <source media="(max-width: 600px)" srcSet={mobileImg} />
+            <img src={desktopImg} alt="team" />
+          </picture>
+        </div>
+
       </section>
 
       {/* ================= FOUNDER SECTION ================= */}
@@ -78,7 +50,7 @@ const About = () => {
           {/* LEFT IMAGE */}
           <div className="founder__image-wrapper">
             <img
-              src={about_hero1}
+              src={abhishek}
               alt="Founder"
               className="founder__image"
             />
@@ -94,8 +66,9 @@ const About = () => {
             </h2>
 
             <p className="founder__quote">
-              “Hello people, this is the founder and I'd love to share my perspective.
-              For me TAKA is not just a service or a platform it's a solution, a stitch to the existing gap in the existing marketing campaigns at your comfort”
+              “To me, TAKA is more than just a service or a platform - it’s a direct solution to a very real problem. 
+              We recognized the exhausting friction in traditional influencer marketing and built TAKA to seamlessly
+              bridge the gap between premium brands and verified creators.”
             </p>
 
             <h3 className="founder__name">
@@ -111,10 +84,6 @@ const About = () => {
         </div>
 
       </section>
-
-
-
-
 
       {/* ================= TEAM SECTION ================= */}
 
@@ -141,10 +110,7 @@ const About = () => {
 
               <span className="team__outline">TEAM OF</span>
 
-              <div className="team__heading">
-                <h3 className="team__subtitle">Meet The <br /> Crew</h3>
-                <h2 className="team__title">Experts</h2>
-              </div>
+              <h2 className="team__title">Experts</h2>
 
             </div>
 
@@ -164,7 +130,7 @@ const About = () => {
                   <img src={about_hero1} alt="team" />
                 </div>
 
-                <h4>David Cooper <span>/ App Developer</span></h4>
+                <h4>Aryan Gautam <span> <br /> Full Stack Developer</span></h4>
 
               </div>
 
@@ -181,11 +147,11 @@ const About = () => {
                   <img src={about_hero1} alt="team" />
                 </div>
 
-                <h4>David Cooper <span>/ App Developer</span></h4>
+                <h4> Kritika Singh <span> <br /> Full Stack Developer</span></h4>
 
               </div>
 
-              <p className="team__link">About Him ↗</p>
+              <p className="team__link">About Her ↗</p>
 
             </div>
 
@@ -198,24 +164,7 @@ const About = () => {
                   <img src={about_hero1} alt="team" />
                 </div>
 
-                <h4>David Cooper <span>/ App Developer</span></h4>
-
-              </div>
-
-              <p className="team__link">About Him ↗</p>
-
-            </div>
-
-
-            <div className="team__member">
-
-              <div className="team__info">
-
-                <div className="team__avatar">
-                  <img src={about_hero1} alt="team" />
-                </div>
-
-                <h4>David Cooper <span>/ App Developer</span></h4>
+                <h4>Shreyansh Tiwari <span> <br /> Content Writer</span></h4>
 
               </div>
 
@@ -249,21 +198,12 @@ const About = () => {
           <div className="about_cta__content">
 
             <h2 className="about_cta__title">
-              Lorem Ipsum Is <span>Simply</span>
+              Join the exclusive Network
             </h2>
 
             <p className="about_cta__desc">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              Stop paying for empty vanity metrics. Partner with local creators who actually bring customers through your doors.
             </p>
-
-            <div className="about_cta__input">
-
-              <input type="email" placeholder="Your e-mail" />
-
-              <span className="about_cta__arrow">↗</span>
-
-            </div>
 
           </div>
 
@@ -289,13 +229,12 @@ const About = () => {
           <div className="about_features__card">
             <span className="about_features__number">01</span>
 
-            <h3>Lorem Ipsum</h3>
+            <h3>Plan the Campaign</h3>
 
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Brands lock in their campaign budgets and aesthetic requirements with us.
             </p>
 
-            <a href="#">FIND OUT MORE ↗</a>
           </div>
 
 
@@ -303,13 +242,12 @@ const About = () => {
           <div className="about_features__card">
             <span className="about_features__number">02</span>
 
-            <h3>Lorem Ipsum</h3>
+            <h3>Verified Creator Match</h3>
 
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              We hand-pick and assign the ideal, verified creator from our exclusive network.
             </p>
 
-            <a href="#">FIND OUT MORE ↗</a>
           </div>
 
 
@@ -317,13 +255,12 @@ const About = () => {
           <div className="about_features__card">
             <span className="about_features__number">03</span>
 
-            <h3>Lorem Ipsum</h3>
+            <h3>Drive Real Engagement</h3>
 
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Creators visit, capture authentic content, and drive measurable local engagement.
             </p>
 
-            <a href="#">FIND OUT MORE ↗</a>
           </div>
 
         </div>

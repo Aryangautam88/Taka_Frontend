@@ -1,7 +1,7 @@
 /*----------------------------------- contact------------------------------------ */
 
 .contact {
-  padding: 90px 3%;
+  padding: 90px 6%;
   background: #FFFFFF;
   font-family: "Inter", sans-serif;
 }
@@ -21,7 +21,7 @@
 
 .contact__left h2 {
   font-family: "Unbounded", sans-serif;
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 900;
   color: #1f232b;
   line-height: 1.2;
@@ -29,7 +29,7 @@
 }
 
 .contact__left p {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Plus Jakarta Sans", sans-serif;
   color: #6b7280;
   max-width: 360px;
@@ -166,6 +166,29 @@
   line-height: 1.3;
 }
 
+.footer__col ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.footer__col ul li a:hover {
+  color: #ffd902; /* ya tumhara theme color */
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__socials a {
+  color: inherit;
+  margin-right: 10px;
+}
+
 /* ===== RESPONSIVE ===== */
 
 @media(max-width:900px) {
@@ -188,7 +211,7 @@
   }
 
   .contact__left h2 {
-      font-size: 32px;
+      font-size: 28px;
   }
 
   .paperIcon {
@@ -199,11 +222,15 @@
 
 @media(max-width:600px) {
 
+  .contact{
+    padding: 20px 6%;
+  }
+
   .paperIcon {
       width: 130px;
       margin: 20px auto 0;
   }
-
+  
 }
 
 

@@ -168,6 +168,168 @@ body {
     opacity: 0.8;
 }
 
+/* CENTER TEXT */
+.heroCenter-L {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    width: 90%;
+    padding: 0 10px;
+}
+
+/* top small text */
+.heroTopText-L {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+/* MAIN TEXT */
+.heroTitle-L {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+
+}
+
+/* FIX TYPO ERROR (44fpx ❌) */
+.small-L {
+    font-size: 54px;
+    display: block;
+    opacity: 0.9;
+    margin-bottom: -10px;
+}
+
+/* MID */
+.medium-L {
+    font-size: 65px;
+    display: block;
+}
+
+/* BIG */
+.large-L {
+    font-size: 85px;
+    display: block;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 900px) {
+
+    .heroCenter-L {
+        width: 95%;
+    }
+
+    .heroTopText-L {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .small-L {
+        font-size: 32px;
+    }
+
+    .medium-L {
+        font-size: 48px;
+    }
+
+    .large-L {
+        font-size: 60px;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+    .heroCenter-L {
+        top: 50%; /* thoda upar for better view */
+    }
+
+    .heroTopText-L {
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .heroTitle-L {
+        line-height: 1.15;
+    }
+
+    .small-L {
+        font-size: 22px;
+    }
+
+    .medium-L {
+        font-size: 32px;
+    }
+
+    .large-L {
+        font-size: 42px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 400px) {
+
+    .small-L {
+        font-size: 33px;
+        margin-bottom: -20px;
+    }
+
+    .medium-L {
+        font-size: 40px;
+    }
+
+    .large-L {
+        margin-top: -18px;
+        font-size: 49px;
+    }
+    .heroTitle-L{
+        line-height: 30px;
+    }
+}
+
+/* overlay */
+.overlay1 {
+    background: rgba(44, 44, 44, 0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .heroTitle-L {
+        font-size: 55px;
+    }
+
+    .heroSubText-L {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .heroTitle-L {
+        font-size: 36px;
+    }
+
+    .heroTopText-L {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .heroSubText-L {
+        font-size: 14px;
+    }
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
@@ -289,11 +451,11 @@ body {
     }
 
     .features__grid {
-    margin-left: 0;
-    padding: 0 30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* pehle 3 fixed columns thi → ab flexible ho gaya */
-}
+        margin-left: 0;
+        padding: 0 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* pehle 3 fixed columns thi → ab flexible ho gaya */
+    }
 
     .featureCard {
         padding-left: 10px;

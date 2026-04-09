@@ -1,28 +1,47 @@
 import React from "react";
 import "./Contact.css";
-import cafe from "../assets/cafe.png"; // apni image ka path yaha daal
+import boatImg from "../assets/boat1.png";
 
 const Contact = () => {
   return (
-    <div className="contactSection">
+    <div className="contact-container-c">
+      <div className="contact-card-c">
 
-      {/* TOP TEXT */}
-      <h1 className="outlineText">WE ARE NEXT GEN</h1>
-      <h2 className="mainText">INFLUENCER MARKETING AGENCY</h2>
+        {/* LEFT */}
+        <div className="contact-left-c">
+          <h1>
+            We Would Love To <br /> Hear From You
+          </h1>
 
-      {/* INFO ROW */}
-      <div className="infoRow">
-        <span>SINCE 2026</span>
-        <span>A+ Rating</span>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard.
+          </p>
+
+          <img src={boatImg} alt="icon" className="contact-img-c" />
+        </div>
+
+        {/* RIGHT */}
+        <div className="contact-right-c">
+          <div className="input-row-c">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+          </div>
+
+          <input
+            type="text"
+            placeholder="How we can help you?"
+            className="full-c"
+          />
+
+          <textarea placeholder="Message"></textarea>
+
+          <button className="submit-btn-c">
+            SUBMIT ↗
+          </button>
+        </div>
+
       </div>
-
-      {/* IMAGE BOX */}
-      <div className="videoBox">
-        <img src={cafe} alt="cafe" />
-
-        
-      </div>
-
     </div>
   );
 };

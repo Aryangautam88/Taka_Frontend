@@ -12,12 +12,12 @@ const steps = [
 ];
 
 const data = [
-    { num: "01", title: "Lorem Ipsum" },
-    { num: "02", title: "Lorem Ipsum" },
-    { num: "03", title: "Lorem Ipsum" },
-    { num: "04", title: "Lorem Ipsum" },
-    { num: "05", title: "Lorem Ipsum" },
-    { num: "06", title: "Lorem Ipsum" },
+    { num: "01", title: "Verified Matching", desc: "Stop guessing with your marketing budget. We connect you with vetted, local creators whose audience perfectly matches your target demographic." },
+    { num: "02", title: "Zero-Friction Setup", desc: "You set the budget and the vibe. We handle the creator negotiations, content briefs, and scheduling so you can focus on your business." },
+    { num: "03", title: "Real Foot Traffic", desc: "Move beyond empty vanity metrics. Our highly-targeted campaigns are designed to drive actual, measurable customers right to your doorstep." },
+    { num: "04", title: "Premium Collabs", desc: "No more sending cold DMs or begging for free coffee. Get direct access to exclusive paid and barter collaborations with Indore's top brands." },
+    { num: "05", title: "Zero Admin Work", desc: "We pitch the brands, secure the budgets, and negotiate the terms on your behalf. You just show up, experience the brand, and create." },
+    { num: "06", title: "100% Free Roster", desc: "Unlike traditional agencies, we don't take hidden cuts from your barter deals. Joining the exclusive TAKA network is completely free for verified talent." },
 ];
 
 const Services = () => {
@@ -27,6 +27,28 @@ const Services = () => {
             {/*---------------------------- Top --------------------------------*/}
 
             <section className="servicesHero">
+
+                {/* CENTER TEXT */}
+                <div className="heroCenter-L">
+
+                    <span className="heroTopText-L">
+                        India’s Premium Influencer Marketing Platform
+                    </span>
+
+                    <h1 className="heroTitle-L">
+                        <span className="small-L">INFLUENCE</span>
+                        <br />
+                        <span className="medium-L">COMMERCE</span>
+                        <br />
+                        <span className="large-L">CONNECTED</span>
+                        <br />
+                    </h1>
+
+                    {/* <p className="heroSubText-L">
+                        Authentic Brand Collaborations & Real Engagement
+                    </p> */}
+
+                </div>
 
                 {/* Background Image */}
                 <img src={bg} alt="service" className="bgImage" />
@@ -76,12 +98,7 @@ const Services = () => {
                             {/* CONTENT */}
                             <h3>{item.title}</h3>
 
-                            <p>
-                                Glaebam ipsam nunc at hic reponat nam dicta lius te est iriure in aut
-                                stante inceptos scandalum germaniafioniam vincere risus Glaebam ipsam
-                                nunc at hic reponat nam dicta lius te est iriure in aut stante
-                                inceptos scandalum germaniafioniam vincere risus
-                            </p>
+                            <p>{item.desc}</p>
 
                         </div>
                     ))}

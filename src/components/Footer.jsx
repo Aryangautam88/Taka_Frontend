@@ -4,7 +4,7 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaFacebookF,
+  FaInstagram,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
@@ -13,6 +13,7 @@ import taka_logo from "../assets/taka_logo.png";
 import leftImg from "../assets/lefthome.png";
 import rightImg from "../assets/righthome.png";
 import paperIcon from "../assets/boat.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -82,7 +83,7 @@ const Footer = () => {
 
           <div className="community__card center">
             <button className="newsletter">SUBSCRIBE TO NEWSLETTER</button>
-            <h3>JOIN OUR INFLUENSO<br />COMMUNITY</h3>
+            <h3>JOIN OUR TAKA<br />COMMUNITY</h3>
           </div>
 
           <div className="community__card image">
@@ -110,8 +111,7 @@ const Footer = () => {
               <img src={taka_logo} alt="logo" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus.
+              Where brands and creators collaborate smarter to grow faster and reach the right audience.
             </p>
           </div>
 
@@ -119,21 +119,10 @@ const Footer = () => {
           <div className="footer__col">
             <h4>Navigation</h4>
             <ul>
-              <li>Home</li>
-              <li>Pages</li>
-              <li>About Us</li>
-              <li>Services</li>
-            </ul>
-          </div>
-
-          {/* QUICK LINKS */}
-          <div className="footer__col">
-            <h4>Quick Link</h4>
-            <ul>
-              <li>Contact Us</li>
-              <li>FAQs</li>
-              <li>Booking</li>
-              <li>Pages</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -141,40 +130,48 @@ const Footer = () => {
           <div className="footer__col">
             <h4>Services</h4>
             <ul>
-              <li>Home</li>
-              <li>Contact</li>
-              <li>Blog</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/career">Career</Link></li>
             </ul>
           </div>
+
+          {/* QUICK LINKS */}
+          <div className="footer__col">
+            <h4>Quick Link</h4>
+            <ul>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/career">Career</Link></li>
+              {/* <li><Link to="/booking">Booking</Link></li>
+              <li><Link to="/pages">Pages</Link></li> */}
+            </ul>
+          </div>
+
         </div>
 
         {/* BOTTOM SECTION (ALIGNED WITH COLUMNS) */}
         <div className="footer__bottom">
           <div className="footer__bottom-content">
 
-            {/* Column 1 */}
-            <div className="footer__item">
+            <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="footer__item">
               <FaMapMarkerAlt />
               <span>Indore, Madhya Pradesh</span>
-            </div>
+            </a>
 
-            {/* Column 2 */}
-            <div className="footer__item">
+            <a href="tel:+917318325128" className="footer__item">
               <FaPhoneAlt />
-              <span>(+876) 765 665</span>
-            </div>
+              <span>(+91) 7318325128</span>
+            </a>
 
-            {/* Column 3 */}
-            <div className="footer__item">
+            <a href="mailto:mail@Taka.id" className="footer__item">
               <FaEnvelope />
               <span>mail@Taka.id</span>
-            </div>
+            </a>
 
-            {/* Column 4 */}
             <div className="footer__socials">
-              <FaFacebookF />
-              <FaTwitter />
-              <FaYoutube />
+              <a href="https://www.instagram.com/taka.co.in/"><FaInstagram /></a>
+              <a href="#"><FaTwitter /></a>
+              <a href="#"><FaYoutube /></a>
             </div>
 
           </div>
