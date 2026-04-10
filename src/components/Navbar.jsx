@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/taka_logo.png";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -43,6 +44,12 @@ const Navbar = () => {
         };
     }, [menuOpen]);
 
+    const location = useLocation();
+
+    useEffect(() => {
+        setMenuOpen(false);
+    }, [location]);
+
     return (
         <>
             <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -54,11 +61,11 @@ const Navbar = () => {
 
                 {/* Links */}
                 <ul ref={menuRef} className={`nav-links ${menuOpen ? "show" : ""}`}>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/services">Services</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
-                    <li><NavLink to="/career">Career</NavLink></li>
+                    <li><NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink></li>
+                    <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink></li>
+                    <li><NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink></li>
+                    <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink></li>
+                    <li><NavLink to="/career" onClick={() => setMenuOpen(false)}>Career</NavLink></li>
 
                     {/* Mobile Auth */}
                     <div className="mobile-auth">
