@@ -1,0 +1,415 @@
+/* ==========================================================
+   TAKA ULTRA PREMIUM REGISTER UI
+   LUXURY / NEXT LEVEL / RESPONSIVE
+   CLASS NAMES SAME (-R)
+========================================================== */
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  min-height:100%;
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+/* ==========================================================
+   PREMIUM BACKGROUND
+========================================================== */
+body{
+  background:
+  radial-gradient(circle at 10% 20%, rgba(255,255,255,.55), transparent 25%),
+  radial-gradient(circle at 90% 10%, rgba(255,255,255,.35), transparent 20%),
+  radial-gradient(circle at 80% 80%, rgba(255,255,255,.22), transparent 25%),
+  linear-gradient(135deg,#fff8d6 0%,#fde68a 25%,#facc15 60%,#eab308 100%);
+  background-attachment:fixed;
+}
+
+/* ==========================================================
+   COMMON
+========================================================== */
+h2{
+  font-size:38px;
+  line-height:1.2;
+  color:#0f172a;
+  font-family:'Unbounded',sans-serif;
+  font-weight:600;
+  letter-spacing:-1px;
+  margin-bottom:10px;
+}
+
+p{
+  color:#475569;
+  font-size:15px;
+  line-height:1.7;
+  margin-bottom:24px;
+}
+
+h4{
+  font-size:16px;
+  color:#0f172a;
+  margin:18px 0 10px;
+  font-weight:600;
+}
+
+label{
+  color:#334155;
+  font-size:14px;
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+.container-R,
+.final-container-R{
+  width:100%;
+  min-height:100vh;
+  padding:110px 20px 40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+/* ==========================================================
+   MAIN CARD
+========================================================== */
+.card-R,
+.right-R{
+  width:100%;
+  max-width:760px;
+  padding:42px;
+  border-radius:34px;
+
+  background:rgba(255,255,255,.68);
+  backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);
+
+  border:1px solid rgba(255,255,255,.45);
+
+  box-shadow:
+  0 30px 80px rgba(15,23,42,.12),
+  inset 0 1px 0 rgba(255,255,255,.7),
+  inset 0 -1px 0 rgba(255,255,255,.25);
+
+  animation:fadeUp .45s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* glowing border */
+.card-R::before,
+.right-R::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1px;
+  border-radius:34px;
+  background:linear-gradient(
+    130deg,
+    rgba(255,255,255,.9),
+    rgba(250,204,21,.5),
+    rgba(255,255,255,.3)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  pointer-events:none;
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+input,
+select,
+textarea{
+  width:100%;
+  padding:16px 18px;
+  margin:10px 0;
+
+  border-radius:16px;
+  border:1px solid rgba(226,232,240,.9);
+
+  background:rgba(255,255,255,.92);
+
+  font-size:14px;
+  color:#0f172a;
+
+  transition:.28s ease;
+}
+
+input::placeholder{
+  color:#94a3b8;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline:none;
+  border-color:#facc15;
+  background:#ffffff;
+  box-shadow:
+    0 0 0 5px rgba(250,204,21,.16),
+    0 10px 20px rgba(250,204,21,.08);
+}
+
+/* ==========================================================
+   BUTTONS
+   (universal style remove nahi kiya, neutral rakha)
+========================================================== */
+button{
+  border:none;
+  background:none;
+  font-family:inherit;
+}
+
+/* ==========================================================
+   COMMON BUTTON CLASS
+========================================================== */
+.common-btn-R{
+  width:100%;
+  padding:15px 18px;
+  margin:10px 0;
+
+  border:none;
+  border-radius:16px;
+
+  font-size:15px;
+  font-weight:600;
+  color:#0f172a;
+
+  background:rgba(255,255,255,.9);
+
+  cursor:pointer;
+  transition:.28s ease;
+
+  border:1px solid rgba(255,255,255,.65);
+}
+
+.common-btn-R:hover{
+  transform:translateY(-3px);
+  background:#fffef6;
+  border-color:#facc15;
+  box-shadow:
+    0 18px 30px rgba(15,23,42,.08);
+}
+
+.common-btn-R:active{
+  transform:scale(.985);
+}
+
+.common-btn-R:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+  transform:none !important;
+  box-shadow:none !important;
+}
+
+/* ==========================================================
+   ACTIVE OPTION
+========================================================== */
+.active-R{
+  background:linear-gradient(135deg,#facc15,#eab308);
+  color:#111827;
+  border-color:#f59e0b;
+
+  box-shadow:
+    0 18px 32px rgba(234,179,8,.28);
+}
+
+/* ==========================================================
+   BUTTON ROW
+========================================================== */
+.btn-row-R{
+  display:flex;
+  gap:14px;
+  margin-top:22px;
+}
+
+.prev-R{
+  flex:1;
+  background:#ffffff;
+}
+
+.next-R{
+  flex:1;
+  background:linear-gradient(135deg,#facc15,#eab308);
+}
+
+.main-btn-R{
+  flex:1;
+  background:linear-gradient(135deg,#111827,#1e293b);
+  color:#ffffff;
+}
+
+.next-R:hover,
+.main-btn-R:hover{
+  transform:translateY(-3px);
+}
+
+/* ==========================================================
+   CHECKBOX
+========================================================== */
+.check-line-R{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:12px;
+  font-size:14px;
+}
+
+.check-line-R input{
+  width:18px;
+  height:18px;
+  margin:0;
+  accent-color:#eab308;
+}
+
+/* ==========================================================
+   DOUBLE BOX
+========================================================== */
+.double-box-R{
+  margin-top:16px;
+  padding:16px;
+  border-radius:22px;
+  background:rgba(255,255,255,.52);
+  border:1px solid rgba(255,255,255,.35);
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#eab308;
+  border-radius:20px;
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(24px) scale(.98);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+@media (max-width:992px){
+
+  .container-R,
+  .final-container-R{
+    padding:100px 16px 30px;
+  }
+
+  .card-R,
+  .right-R{
+    padding:32px;
+    border-radius:28px;
+  }
+
+  h2{
+    font-size:30px;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+@media (max-width:768px){
+
+  .container-R,
+  .final-container-R{
+    padding:88px 14px 24px;
+    align-items:flex-start;
+  }
+
+  .card-R,
+  .right-R{
+    padding:22px;
+    border-radius:22px;
+  }
+
+  h2{
+    font-size:24px;
+    line-height:1.35;
+  }
+
+  p{
+    font-size:14px;
+    margin-bottom:18px;
+  }
+
+  .common-btn-R,
+  input{
+    padding:14px;
+    font-size:14px;
+  }
+
+  .btn-row-R{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .check-line-R{
+    align-items:flex-start;
+  }
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+@media (max-width:480px){
+
+  .container-R,
+  .final-container-R{
+    padding:80px 10px 18px;
+  }
+
+  .card-R,
+  .right-R{
+    padding:18px;
+    border-radius:18px;
+  }
+
+  h2{
+    font-size:20px;
+  }
+
+  p{
+    font-size:13px;
+  }
+
+  h4{
+    font-size:14px;
+  }
+
+  .common-btn-R,
+  input{
+    font-size:13px;
+    padding:13px;
+    border-radius:12px;
+  }
+
+  .check-line-R{
+    font-size:13px;
+  }
+}

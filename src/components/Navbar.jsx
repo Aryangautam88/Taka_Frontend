@@ -1,14 +1,20 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/taka_logo.png";
 
+// import Register from "./Register";
+
+
+
 const Navbar = () => {
+    const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
     // const [authActive, setAuthActive] = useState("login");
     const [scrolled, setScrolled] = useState(false);
-    const [showForm, setShowForm] = useState(false);
-    const [showSuccess, setShowSuccess] = useState(false);
+    // const [showForm, setShowForm] = useState(false);
+    // const [showSuccess, setShowSuccess] = useState(false);
 
     const menuRef = useRef(null);
     const hamburgerRef = useRef(null);
@@ -91,7 +97,10 @@ const Navbar = () => {
 
                         {/* NEW LET'S TALK */}
                         <div className="auth-toggle">
-                            <button
+                            <button onClick={() => navigate("/register")}>
+                                Let's Talk
+                            </button>
+                            {/* <button
                                 className={showForm ? "active" : ""}
                                 onClick={() => {
                                     setShowForm(true);
@@ -99,7 +108,7 @@ const Navbar = () => {
                                 }}
                             >
                                 Let's Talk
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </ul>
@@ -125,12 +134,15 @@ const Navbar = () => {
                 {/* Desktop Let's Talk */}
                 <div className="desktop-talk">
                     <div className="auth-toggle">
-                        <button
+                        <button onClick={() => navigate("/register")}>
+                            Let's Talk
+                        </button>
+                        {/* <button
                             className={showForm ? "active" : ""}
                             onClick={() => setShowForm(true)}
                         >
                             Let's Talk
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 {/* Hamburger */}
@@ -146,7 +158,7 @@ const Navbar = () => {
             </nav>
 
             {/* MODAL */}
-            {showForm && (
+            {/* {showForm && (
                 <div className="modal">
                     <form
                         className="form"
@@ -196,7 +208,7 @@ const Navbar = () => {
                         <p>We’ll contact you soon.</p>
                     </div>
                 </div>
-            )}
+            )} */}
         </>
     );
 };
