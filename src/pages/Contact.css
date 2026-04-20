@@ -172,8 +172,7 @@ textarea {
 
   .contact-container-c {
     width: calc(100% - 20px);
-    margin: 10px auto;
-    margin-top: 80px;
+    margin: 90px auto 50px;
     padding:10px;
   }
 
